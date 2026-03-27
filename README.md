@@ -158,3 +158,16 @@ MRI-brain-tumor/
 
 - Dataset: [Masoud Nickparvar](https://www.kaggle.com/masoudnickparvar) — Kaggle
 - Arquitectura base: [EfficientNetB0](https://arxiv.org/abs/1905.11946) — Tan & Le, 2019
+
+---
+
+## Próximos pasos
+
+- [ ] Grad-CAM compatible con Keras 3: implementar visualización
+      de mapas de calor para interpretar las decisiones del modelo
+- [ ] Mejorar recall de glioma (79% actual): ajustar class_weight
+      o agregar más datos de entrenamiento
+- [ ] Despliegue: crear API REST con FastAPI para clasificación
+      de nuevas imágenes MRI
+- [ ] Interfaz web: subir imagen y obtener predicción con mapa
+      de calor en tiempo real
