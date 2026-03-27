@@ -57,10 +57,10 @@ Dense(4, softmax)
 
 | Clase | Precision | Recall | F1 |
 |-------|-----------|--------|----|
-| glioma | — | — | **86%** |
-| meningioma | — | — | **89%** |
-| notumor | — | — | **97%** |
-| pituitary | — | — | **97%** |
+| glioma | 0.95 | 0.79 | **86%** |
+| meningioma | 0.87 | 0.92 | **89%** |
+| notumor | 0.94 | 1.00 | **97%** |
+| pituitary | 0.94 | 0.99 | **97%** |
 
 ### Visualizaciones generadas
 
@@ -68,6 +68,7 @@ Dense(4, softmax)
 |---------|-----------|
 | `training_curves.png` | Accuracy y Loss por época (fases 1 y 2) |
 | `confusion_matrix.png` | Matriz de confusión normalizada |
+| `gradcam_final.png` | Grid Grad-CAM: original · heatmap · overlay por clase |
 
 ---
 
@@ -123,6 +124,7 @@ best_brain_model.keras      ← mejor checkpoint (val_accuracy)
 brain_tumor_final.keras     ← modelo final completo
 training_curves.png
 confusion_matrix.png
+gradcam_final.png
 ```
 
 ---
@@ -163,7 +165,7 @@ MRI-brain-tumor/
 
 ## Próximos pasos
 
-- [ ] Grad-CAM compatible con Keras 3: implementar visualización
+- [x] Grad-CAM compatible con Keras 3: implementar visualización
       de mapas de calor para interpretar las decisiones del modelo
 - [ ] Mejorar recall de glioma (79% actual): ajustar class_weight
       o agregar más datos de entrenamiento
