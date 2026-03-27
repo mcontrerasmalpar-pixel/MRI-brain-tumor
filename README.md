@@ -167,6 +167,10 @@ MRI-brain-tumor/
 
 - [x] Grad-CAM compatible con Keras 3: implementar visualización
       de mapas de calor para interpretar las decisiones del modelo
+- [ ] Análisis de errores de glioma: estudiar los 84 casos
+      mal clasificados (recall 79%), identificar patrones
+      visuales comunes y comparar con meningioma para
+      explicar la confusión del modelo
 - [ ] Mejorar recall de glioma (79% actual): ajustar class_weight
       o agregar más datos de entrenamiento
 - [ ] Despliegue: crear API REST con FastAPI para clasificación
